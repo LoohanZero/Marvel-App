@@ -18,13 +18,12 @@ const Info = styled.h1`
   padding: 30px;
   color: #202020;
   text-transform: uppercase;
-  
 `;
 
-const ErrorPage = ({text}) => {
+const ErrorPage = ({ text }) => {
   return (
     <Container>
-      <Image src="500-internal-server-error-featured-image-1.png" />
+      <Image src="imgs/500-internal-server-error-featured-image-1.png" />
       <Info>{text}</Info>
     </Container>
   );
