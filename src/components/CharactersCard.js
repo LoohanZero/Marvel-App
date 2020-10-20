@@ -9,6 +9,11 @@ const HoverContainer = styled.div`
   position: absolute;
   z-index: 1;
   transition: 0.4s;
+
+  @media(max-width: 450px) {
+    width: 220px;
+    height: 50%;
+  }
 `;
 
 const Container = styled.article`
@@ -21,6 +26,10 @@ const Container = styled.article`
   position: relative;
   transition: 0.3s;
   cursor: pointer;
+
+  @media(max-width: 450px) {
+    width: 220px;
+  }
 
   &::after {
     content: "";
@@ -38,8 +47,10 @@ const Container = styled.article`
   }
 
   &:hover > .hover-box {
-    transform: translateY(99.6%);
+    transform: translateY(100%);
     transition: 0.4s;
+
+
   }
 
   &:hover img {
@@ -53,6 +64,13 @@ const ImageContainer = styled.div`
   z-index: 9;
   border-bottom: 4px solid #e62429;
   overflow: hidden;
+
+  @media(max-width: 450px) {
+    width: 220px;
+  }
+
+ 
+
 `;
 const Image = styled.img`
   height: 100%;

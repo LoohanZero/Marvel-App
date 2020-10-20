@@ -18,6 +18,10 @@ const Text = styled.a`
   text-decoration: none;
   transition: 0.3s;
 
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
+
   &:hover {
     color: #e62429;
     transition: 0.3s;

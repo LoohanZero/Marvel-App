@@ -29,7 +29,9 @@ body {
   
 }
 `;
-const MainContainer = styled.div``;
+const MainContainer = styled.div`
+  width: 100vw;
+`;
 
 const App = () => {
   return (

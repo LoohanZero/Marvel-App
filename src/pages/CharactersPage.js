@@ -12,6 +12,8 @@ const Container = styled.div`
   justify-content: center;
   background-color: #c0c0c0;
   padding-bottom: 25px;
+
+  
 `;
 
 const LoadingErrorContainer = styled(Container)`

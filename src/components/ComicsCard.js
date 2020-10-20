@@ -12,6 +12,10 @@ const Container = styled.article`
   width: 225px;
   height: 500px;
 
+  @media (max-width: 550px) {
+  margin: 10px 25px;
+}
+
   &:hover .card-hover {
     transform: translateY(-15px);
     transition: 0.3s;

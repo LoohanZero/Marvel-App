@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -21,6 +21,7 @@ const LoadingErrorContainer = styled(Container)`
   align-items: center;
   background-color: #c0c0c0;
   height: calc(100vh - 70px);
+  width: 100%;
 `;
 
 const ComicsPage = () => {

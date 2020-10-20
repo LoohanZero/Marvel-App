@@ -4,11 +4,14 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import TopLinks from "../components/TopLinks";
 
-const MainContainer = styled.div``;
+const MainContainer = styled.div`
+  background-color: #000000;
+  overflow: hidden;
+`;
 
 const BackgroundImage = styled.div`
   position: absolute;
-  height: 80%;
+  min-height: calc(100vh - 150px);
   width: 100%;
   opacity: 0.2;
   background-image: url(${(props) => props.backgroundImg});
@@ -21,25 +24,54 @@ const Container = styled.article`
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-  background-color: #000000;
+  min-height: calc(100vh - 150px);
   padding: 40px 0 15px 0;
   box-sizing: border-box;
-`;
 
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 
 const DetailsContainer = styled.div`
   padding: 0 0 5px 50px;
   width: 50%;
   min-height: calc(100vh - 215px);
+
+  @media (max-width: 1100px) {
+    width: 30%;
+  }
+
+  @media (max-width: 650px) {
+    width: 80%;
+    padding: 0 0 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 
 const Image = styled.img`
   height: 500px;
+
+  @media (max-width: 1100px) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 400px) {
+    width: 300px;
+  }
 `;
 
 const Title = styled.h1`
   color: #ffffff;
   margin-bottom: 20px;
+
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 `;
 
 const Description = styled.p`
@@ -48,6 +80,10 @@ const Description = styled.p`
   width: 600px;
   text-align: justify;
   padding-bottom: 15px;
+
+  @media (max-width: 650px) {
+    width: auto;
+  }
 `;
 
 const Subtitle = styled.h2`
@@ -62,6 +98,10 @@ const GenericText = styled.p`
   line-height: 20px;
   width: 600px;
   text-align: justify;
+
+  @media (max-width: 650px) {
+    width: auto;
+  }
 `;
 
 const ComicPage = () => {
@@ -79,7 +119,6 @@ const ComicPage = () => {
       setComic(data.data.results[0]);
       setPublishedDate(data.data.results[0].dates[0].date);
       setDescription(data.data.results[0].description);
-
     };
     getComic();
   }, [id]);

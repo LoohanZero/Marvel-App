@@ -9,6 +9,10 @@ const Container = styled.div`
   width: 100vw;
   height: 40px;
   padding: 0 100px;
+
+  @media (max-width: 400px) {
+    padding: 0;
+  }
 `;
 
 const Button = styled.button`
@@ -27,6 +31,11 @@ const Button = styled.button`
   justify-content: center;
   transition: 0.3s;
 
+  @media (max-width: 400px) {
+    justify-content: flex-start;
+    padding-left: 10px; 
+  }
+  
   &:hover {
     background-color: #464646;
     transition: 0.3s;
